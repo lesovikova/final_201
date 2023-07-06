@@ -186,11 +186,17 @@ body {
 
 canvas {
     height: 0;
+    overflow: hidden;
 }
 
 #statistics__chart{
     color: #F1F0F9;
     margin: 20px auto;
     background-color: rgb(255 255 255 / 37%);
+}
+
+.muted {
+    height: 0;
+    overflow: hidden;
 }
 
