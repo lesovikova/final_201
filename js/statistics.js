@@ -28,12 +28,22 @@ function calculatePercents(data) {
 
 function displayPercents(data, names) {
     const container = document.querySelector('.percents__list');
+    const li = document.createElement('li');
+    if(isNaN(data[0])){
+        li.textContent = "You haven't filled a day yet!";
+        container.append(li);
+    }
+    else {
     for(let i = 0; i < data.length; i++) {
+        console.log(data[i]);
+        
         const li = document.createElement('li');
+       
         li.textContent = `
         ${names[i]} - ${data[i]}% 
         `;
         container.append(li);
+    }
     }
 }
 

@@ -36,7 +36,6 @@ AppState.prototype.takeFromLocalStorage = function(){
     }
 }
 
-console.log("something");
 
 function getResults(e) {
     e.preventDefault();

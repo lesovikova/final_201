@@ -191,5 +191,6 @@ canvas {
 #statistics__chart{
     color: #F1F0F9;
     margin: 20px auto;
+    background-color: rgb(255 255 255 / 37%);
 }
 

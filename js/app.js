@@ -11,6 +11,8 @@ function compareDays(data){
     const date = `${d.getDate()}.${d.getMonth()+1}.${d.getFullYear()}`;
     console.log(date);
     if(data.find(e => e.date === date)){
-        showFinish();
+        form.style.display = "none";
+        document.querySelector('.finish').style.display = "block";
     }
 }
+
