@@ -6,7 +6,7 @@ const data = {
     labels: delightsForShow,
     datasets: [
     {
-      label: 'Views',
+      label: 'Percents',
       data: percentsArray,
       borderWidth: 1,
       color: '#F1F0F9',
