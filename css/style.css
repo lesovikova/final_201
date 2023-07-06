@@ -50,7 +50,7 @@ body {
 }
 
 .header__link-item {
-    color: #3D2B3A;
+    color: #280321;
     font-weight: 700;
     text-decoration: none;
     font-size: 20px;    
@@ -200,3 +200,51 @@ canvas {
     overflow: hidden;
 }
 
+@media all and (min-width: 576px) {
+    .wrapper{
+        max-width: 550px;
+       }
+
+    .header{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .about__heading {
+        margin-bottom: 20px;
+    }
+    
+    .header__nav {
+        margin-top: 25px;
+    }
+
+    .header__list-item:last-of-type {
+        margin-right: 0;
+    }
+
+    .form{
+        max-width: 350px;
+        row-gap: 20px;
+    }
+    
+  }
+
+  @media all and (min-width: 768px) {
+   .wrapper{
+    max-width: 710px;
+   }
+
+  }
+
+
+  @media all and (min-width: 992px) {
+    .wrapper {
+        max-width: 900px;
+       }
+    .finish {
+        margin-top: 50px;
+    }
+    #statistics__chart {
+        max-width: 700px;
+    }
+  }
