@@ -3,5 +3,5 @@
 let state = new AppState();
 state.takeFromLocalStorage();
 
-document.querySelector('form').addEventListener("submit", getResults);
+form.addEventListener("submit", getResults);
 

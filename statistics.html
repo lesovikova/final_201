@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About the app</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Mina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="wrapper">
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__heading">the nine delights</h1>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__list-item">
+              <a href="index.html" class="header__link-item">Home</a>
+            </li>
+            <li class="header__list-item">
+              <a href="about.html" class="header__link-item">About</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main statistics">
+        <div class="percents">
+          <h1 class="about__heading">
+            Over all the time, this is the percentage of the delights you’ve
+            experienced (to the days you’ve marked):
+          </h1>
+          <ul class="percents__list"></ul>
+        </div>
+        <section id="statistics__chart">
+          <canvas id="chart"></canvas>
+        </section>
+
+        <section class="statistics__section">
+          <h2 class="statistics__h2">
+            This is the full history of the delights you have experienced with
+            the dates:
+          </h2>
+          <ul class="statistics__list"></ul>
+        </section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/form.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/chart.js"></script>
+  </body>
+</html>

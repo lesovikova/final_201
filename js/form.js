@@ -1,12 +1,14 @@
 'use strict';
 
-const delights = ['walking_around', 'fellowship', 'deliciousness', 'transcendence', 'goofing', 'amelioration', 'coitus', 'enthrallment', 'wildcard'];
+const form = document.querySelector('form');
+
+const delightsForShow = ['Walking around', 'Fellowship', 'Deliciousness', 'Transcendence', 'Goofing', 'Amelioration', 'Coitus', 'Enthrallment', 'Wildcard'];
+const delightsForUse = ['walking_around', 'fellowship', 'deliciousness', 'transcendence', 'goofing', 'amelioration', 'coitus', 'enthrallment', 'wildcard'];
 
 
-function NewDay(arr, nodeList){
-    for(let i = 0; i < arr.length; i++){
-            console.log(nodeList[i].checked);
-            this[arr[i]] = nodeList[i].checked;
+function NewDay(nodeList){
+    for(let i = 0; i < nodeList.length; i++){
+            this[nodeList[i].name] = nodeList[i].checked;
         }  
     const d = new Date(); 
     this.date = `${d.getDate()}.${d.getMonth()+1}.${d.getFullYear()}`;
@@ -18,7 +20,7 @@ function AppState() {
 
 AppState.prototype.getNewDay = function(){
     const results = document.querySelectorAll('[type="checkbox"]');
-    this.allDays.push(new NewDay(delights, results));
+    this.allDays.push(new NewDay(results));
 }
 
 
@@ -34,11 +36,18 @@ AppState.prototype.takeFromLocalStorage = function(){
     }
 }
 
-
+console.log("something");
 
 function getResults(e) {
     e.preventDefault();
     state.getNewDay();
     state.saveToLocalStorage();
+    form.reset();
+    showFinish();
+}
+
+function showFinish(){
+    form.classList.add("end");
+    document.querySelector('.finish').style.display = "block";
 }
 

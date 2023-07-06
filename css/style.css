@@ -56,11 +56,25 @@ body {
     font-size: 20px;    
 }
 
+.main {
+    position: relative;
+}
+
 .form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 1s ease-in-out;
     display: grid;
     grid-template-columns: 2fr 1fr;
     max-width: 280px;
     margin: 0 auto;
+    background-color: #855E98;
+}
+
+.form.end{
+    transform: translateY(-200%);
 }
 
 .form__label {
@@ -94,3 +108,88 @@ body {
     box-shadow: 1px 4px 7px 1px;
     margin: 20px auto;
 }
+
+.finish {
+    display: none;
+}
+
+.finish__heading { 
+    margin-top: 30px;   
+    font-size: 34px;
+    text-align: center;
+    color: #FDE2FF;
+    text-transform: uppercase;
+}
+
+.finish__text {
+    font-size: 22px;
+    color: #F1F0F9;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about {
+    font-family: 'Mina', sans-serif; 
+    color: #F1F0F9;
+    font-size: 16px;
+}
+
+.about__heading {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.about__heading-h2 {
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.about__p {
+    margin-bottom: 25px;
+}
+
+.about__p span {
+    font-weight: 700;
+}
+
+.statistics {
+    color: #F1F0F9;
+    font-family: 'Mina', sans-serif;
+}
+
+.percents {
+    margin-top: 30px;
+}
+
+.percents__list {
+    margin-top: 20px;
+}
+
+.percents__list li {
+    font-size: 16px;
+}
+
+.statistics__list{
+    margin-top: 20px;
+}
+
+.statistics__list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.statistics__h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+canvas {
+    height: 0;
+}
+
+#statistics__chart{
+    color: #F1F0F9;
+    margin: 20px auto;
+}
+
